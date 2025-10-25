@@ -22,7 +22,7 @@ docker volume create db_data
 # ejecutar PostgreSQL (usuario/clave/db del documento)
 docker run -d --name parcial-db \
   -e POSTGRES_USER=admin \
-  -e POSTGRES_PASSWORD=12345 \
+  -e POSTGRES_PASSWORD= \
   -e POSTGRES_DB=parcial_db \
   -v db_data:/var/lib/postgresql/data \
   -p 5432:5432 \
