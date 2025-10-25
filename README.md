@@ -35,7 +35,7 @@ docker exec -it parcial-db psql -U admin -d parcial_db -c \
 docker exec -it parcial-db psql -U admin -d parcial_db -c \
 "INSERT INTO estudiantes(nombre) VALUES ('Ana'),('Luis') RETURNING *;"
 
-# reiniciar y verificar que los datos persisten
+# reiniciar y verificar que los datos persistan
 docker restart parcial-db
 docker exec -it parcial-db psql -U admin -d parcial_db -c "SELECT * FROM estudiantes;"
 
